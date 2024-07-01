@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbarBg {
+  background-color: #7aa2e3;
+}
+
+.btn-primary {
+  background-color: #7aa2e3 !important;
+  border: #7aa2e3;
+}
+
+.homeImg {
+  height: 420px !important;
+  width: 100% !important;
+}
+
+/* new */
+.slider-img {
+  width: 400px !important;
+  height: 250px !important;
+}
+
+@media (max-width: 900px) {
+  .slider-img {
+    width: 22rem !important;
+    height: 250px;
+    margin-bottom: 10px;
+  }
+
+  .homeImg {
+    width: 100% !important;
+    padding: 0 !important;
+    height: 250px;
+    margin-bottom: 10px;
+  }
+  .maps {
+    width: 100% !important;
+    height: 200px !important;
+  }
+}
+
+/* CSS */
+.modal-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.modal-content {
+  width: auto;
+  max-width: 100%; /* Modalın maksimum genişliği */
+}
+
+.modal-body {
+  text-align: center; /* İçerik dikey olarak ortalanır */
+}
+
+.modal-footer {
+  justify-content: center; /* Altbilgi yatay olarak ortalanır */
+}
+
+.modal-body img {
+  max-width: 100%; /* Resmin maksimum genişliği modalın genişliğine eşit olacak */
+  max-height: 90vh; /* Resmin maksimum yüksekliği, modalın yüksekliğinin %80'i kadar olacak */
+  margin: auto; /* Resmi dikey olarak ortala */
+  display: block; /* Resmi blok öğe olarak ayarla */
+}
+
+/* CSS */
+#prevBtn,
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
+
+/* Sağ ve sol okların stilleri */
+#prevBtn::before,
+#nextBtn::before {
+  content: "";
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+}
+
+#prevBtn::before {
+  transform: rotate(135deg);
+}
+
+#nextBtn::before {
+  transform: rotate(-45deg);
+}
